@@ -4,6 +4,7 @@
     --color: #333;
     --color2: #4CAF50;
     --color2-dark: #276e2a;
+    --color3: #ccc;
 }
 
 body {
@@ -118,4 +119,22 @@ button:hover {
 
 html {
     scroll-behavior: smooth;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color3);
+    border-radius: 4px;
+    resize: vertical;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: var(--color2);
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
 }
