@@ -2,6 +2,8 @@
     --background-color: #f3f3f3;
     --background-color2: #e3e3e3;
     --color: #333;
+    --color2: #4CAF50;
+    --color2-dark: #276e2a;
 }
 
 body {
@@ -76,4 +78,23 @@ footer nav ul {
 
 footer nav ul li {
     margin-left: 20px;
+}
+
+button {
+    background-color: var(--color2);
+    border: none;
+    color: var(--background-color2);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color2-dark);
+    transform: scale(1.05);
 }
