@@ -115,3 +115,7 @@ button:hover {
     background-color: var(--color2-dark);
     transform: scale(1.05);
 }
+
+html {
+    scroll-behavior: smooth;
+}
