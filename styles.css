@@ -66,6 +66,16 @@ section {
     padding: 20px;
     background: var(--background-color2);
     border-radius: 5px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 footer {
