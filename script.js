@@ -44,4 +44,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     form.reset();
   });
+
+  // Dynamically display categories using the spread operator
+  const categories = ["Philosophy", "Practices", "Meditation", "Wellness"];
+  const categoryList = document.getElementById("category-list");
+
+  // Create category items
+  const categoryItems = categories.map((category) => {
+    let li = document.createElement("li");
+    let a = document.createElement("a");
+    a.href = `#${category.toLowerCase()}`;
+    a.textContent = category;
+    li.appendChild(a);
+    return li;
+  });
+
+  // Append category items to the category list using the spread operator
+  categoryList.append(...categoryItems);
 });
