@@ -61,4 +61,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Append category items to the category list using the spread operator
   categoryList.append(...categoryItems);
+
+  // Function to filter articles based on selected categories
+  const filterArticles = (...selectedCategories) => {
+    const articles = document.querySelectorAll("article");
+    articles.forEach((article) => {
+      const articleCategory = article.getAttribute("data-category");
+      if (selectedCategories.includes(articleCategory)) {
+        article.style.display = "block";
+      } else {
+        article.style.display = "none";
+      }
+    });
+  };
+
+  // Add event listeners to category links for filtering
+  categoryList.addEventListener("click", (event) => {
+    if (event.target.tagName === "A") {
+      event.preventDefault();
+      const selectedCategory = event.target.textContent.toLowerCase();
+      filterArticles(selectedCategory);
+    }
+  });
 });
