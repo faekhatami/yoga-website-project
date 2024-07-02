@@ -21,19 +21,22 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    let name = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let message = document.getElementById("message").value.trim();
+    // Destructuring form data
+    const { name, email, message } = form.elements;
 
-    if (name === "" || email === "" || message === "") {
+    if (
+      name.value.trim() === "" ||
+      email.value.trim() === "" ||
+      message.value.trim() === ""
+    ) {
       alert("Please fill in all fields.");
       return;
     }
 
     const formData = {
-      name: name,
-      email: email,
-      message: message,
+      name: name.value.trim(),
+      email: email.value.trim(),
+      message: message.value.trim(),
     };
 
     console.log("Form Submitted!", formData);
