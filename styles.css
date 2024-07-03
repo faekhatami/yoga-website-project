@@ -1,10 +1,9 @@
 :root {
-    --background-color: #f3f3f3;
-    --background-color2: #e3e3e3;
-    --color: #333;
-    --color2: #4CAF50;
-    --color2-dark: #276e2a;
-    --color3: #ccc;
+    --primary-color: #4CAF50;
+    --secondary-color: #FFD700;
+    --accent-color: #FFFFFF;
+    --background-color: #F3F3F3;
+    --text-color: #333333;
 }
 
 body {
@@ -12,6 +11,17 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary-color);
 }
 
 .container {
@@ -21,7 +31,8 @@ body {
 }
 
 header {
-    background: var(--background-color);
+    background: var(--accent-color);
+    color: var(--text-color);
     padding: 10px 0;
 }
 
@@ -44,14 +55,14 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: var(--color);
+    color: var(--primary-color);
     transition: color 0.3s ease, border-bottom 0.3s ease;
     padding-bottom: 2px;
 }
 
 nav ul li a:hover {
-    color: var(--color2);
-    border-bottom: 2px solid var(--color2);
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
 }
 
 main {
@@ -65,7 +76,7 @@ section {
     width: 100%;
     margin-bottom: 20px;
     padding: 20px;
-    background: var(--background-color2);
+    background: var(--background-color);
     border-radius: 5px;
     opacity: 0;
     transform: translateY(20px);
@@ -80,7 +91,8 @@ section {
 }
 
 footer {
-    background: var(--background-color);
+    background: var(--accent-color);
+    color: var(--text-color);
     padding: 10px 0;
 }
 
@@ -99,9 +111,9 @@ footer nav ul li {
 }
 
 button {
-    background-color: var(--color2);
+    background-color: var(--primary-color);
     border: none;
-    color: var(--background-color2);
+    color: var(--accent-color);
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -113,7 +125,7 @@ button {
 }
 
 button:hover {
-    background-color: var(--color2-dark);
+    background-color: var(--secondary-color);
     transform: scale(1.05);
 }
 
@@ -126,7 +138,7 @@ input[type="email"],
 textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid var(--color3);
+    border: 1px solid var(--primary-color);
     border-radius: 4px;
     resize: vertical;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -135,11 +147,11 @@ textarea {
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-    border-color: var(--color2);
+    border-color: var(--secondary-color);
     box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
 }
 
 .active {
-    color: var(--color2);
-    border-bottom: 2px solid var(--color2);
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
 }
