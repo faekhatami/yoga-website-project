@@ -84,3 +84,35 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const dataContainer = document.getElementById("data-container");
+  const fetchDataBtn = document.getElementById("fetch-data-btn");
+
+  const fetchDataUsingAsyncAwait = async () => {
+    try {
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/posts"
+      );
+      const data = await response.json();
+      displayData(data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  const displayData = (data) => {
+    dataContainer.innerHTML = ""; // Clear previous data
+    data.forEach((item) => {
+      const div = document.createElement("div");
+      div.classList.add("data-item");
+      div.innerHTML = `
+        <h3>${item.title}</h3>
+        <p>${item.body}</p>
+      `;
+      dataContainer.appendChild(div);
+    });
+  };
+
+  fetchDataBtn.addEventListener("click", fetchDataUsingAsyncAwait);
+});
