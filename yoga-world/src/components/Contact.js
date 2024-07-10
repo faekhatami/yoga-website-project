@@ -23,7 +23,7 @@ const Contact = () => {
       return;
     }
 
-    console.log("Form submitted!", formData);
+    console.log("Form Submitted!", formData);
     alert("Thank you for your message!");
     setFormData({ name: "", email: "", message: "" });
   };
@@ -43,7 +43,7 @@ const Contact = () => {
           required
         />
 
-        <label htmlfor="email">Email:</label>
+        <label htmlFor="email">Email:</label>
         <input
           type="email"
           id="email"
