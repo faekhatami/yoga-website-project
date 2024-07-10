@@ -2,7 +2,7 @@ import React from "react";
 import Home from "./Home";
 import About from "./About";
 import Articles from "./Articles";
-import Categories from ".Categories";
+import Categories from "./Categories";
 import Contact from "./Contact";
 import ApiData from "./ApiData";
 
