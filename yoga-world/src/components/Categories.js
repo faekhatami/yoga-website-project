@@ -40,7 +40,9 @@ const Categories = () => {
   return (
     <section id="categories">
       <h2>Categories</h2>
-      <ul id="category-list">{}</ul>
+      <ul id="category-list">
+        {/* Categories will be dynamically inserted here */}
+      </ul>
     </section>
   );
 };
