@@ -15,34 +15,12 @@ const Categories = () => {
     });
 
     categoryList.append(...categoryItems);
-
-    const filterArticles = (...selectedCategories) => {
-      const articles = document.querySelectorAll("article");
-      articles.forEach((article) => {
-        const articleCategory = article.getAttribute("data-category");
-        if (selectedCategories.includes(articleCategory)) {
-          article.style.display = "block";
-        } else {
-          article.style.display = "none";
-        }
-      });
-    };
-
-    categoryList.addEventListener("click", (event) => {
-      if (event.target.tagName === "A") {
-        event.preventDefault();
-        const selectedCategory = event.target.textContent.toLowerCase();
-        filterArticles(selectedCategory);
-      }
-    });
   }, []);
 
   return (
     <section id="categories">
       <h2>Categories</h2>
-      <ul id="category-list">
-        {/* Categories will be dynamically inserted here */}
-      </ul>
+      <ul id="category-list"></ul>
     </section>
   );
 };
