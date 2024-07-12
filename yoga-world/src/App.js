@@ -1,19 +1,14 @@
 import React from "react";
-import ApiData from "./components/ApiData";
 import "./styles.scss";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Main from "./components/Main";
 
 const App = () => {
   return (
-    <div>
+    <div className="App">
       <Header />
-      <main>
-        <Home />
-        <About />
-        <Articles />
-        <Categories />
-        <Contact />
-        <ApiData />
-      </main>
+      <Main />
       <Footer />
     </div>
   );
