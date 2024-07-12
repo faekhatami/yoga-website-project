@@ -8,8 +8,10 @@ $text-color-light: #f3f3f3;
 $border-color: #cccccc;
 
 // Mixins can be defined here if needed
-@mixin transition($property) {
-  transition: $property 0.3s ease;
+@mixin transition($properties...) {
+  @each $property in $properties {
+    transition: $property 0.3s ease;
+  }
 }
 
 // Global Styles
