@@ -41,6 +41,7 @@ footer .container {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 nav ul {
@@ -48,6 +49,7 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 nav ul li {
@@ -174,4 +176,63 @@ html {
 .active {
   color: var(--secondary-color);
   border-bottom: 2px solid var(--secondary-color);
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+  header .container,
+  footer .container {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 10px;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  header,
+  footer {
+    padding: 15px 0;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    display: block;
+  }
+
+  header .container,
+  footer .container {
+    text-align: center;
+  }
+
+  section {
+    padding: 10px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
 }
